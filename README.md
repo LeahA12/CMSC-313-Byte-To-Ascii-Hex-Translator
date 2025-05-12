@@ -2,7 +2,8 @@
 
 ## AUTHORING:
 * Leah Arfa (UE23179)
-* Affiliation: UMBC, CMSC 313 (Operating Systems), Fall 2023 (or current semester), Date: May 12, 2025
+* Affiliation: UMBC, CMSC 313 (Computer Organization and Assembly Language Programming), Spring 2025
+* Date: May 12, 2025
 
 ## PURPOSE OF SOFTWARE:
 This software takes a predefined sequence of bytes as input and translates each byte into its corresponding two-character ASCII hexadecimal representation. The resulting hexadecimal string is then printed to the standard output, with spaces separating the representations of each original byte, followed by a newline character.
@@ -14,13 +15,13 @@ This software takes a predefined sequence of bytes as input and translates each 
 To assemble and link the program on a Linux system, follow these steps:
 
 1.  **Assemble:** Use the Netwide Assembler (NASM) to assemble the assembly code into an object file:
-    ```bash
+    ```
     nasm -f elf32 -g -F dwarf -o hw11translate2Ascii.o hw11translate2Ascii.asm
     ```
     (This command generates a 32-bit ELF object file with debugging information.)
 
 2.  **Link:** Use the GNU linker (`ld`) to link the object file into an executable:
-    ```bash
+    ```
     ld -m elf_i386 -o hw11translate2Ascii hw11translate2Ascii.o
     ```
     (This command creates a 32-bit executable file named `hw11translate2Ascii`.)
